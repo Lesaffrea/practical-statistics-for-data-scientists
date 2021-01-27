@@ -18,11 +18,11 @@ library(pwr)
 PSDS_PATH <- file.path(dirname(dirname(getwd())))
 
 
-session_times <- read.csv(file.path(PSDS_PATH, 'data', 'web_page_data.csv'))
+session_times <- read.csv(file.path(here::here(), 'data', 'web_page_data.csv'))
 session_times[,2] <- session_times[,2] * 100
-four_sessions  <- read.csv(file.path(PSDS_PATH, 'data', 'four_sessions.csv'))
-click_rate <-  read.csv(file.path(PSDS_PATH, 'data', 'click_rates.csv'))
-imanishi <-  read.csv(file.path(PSDS_PATH, 'data', 'imanishi_data.csv'))
+four_sessions  <- read.csv(file.path(here::here(), 'data', 'four_sessions.csv'))
+click_rate <-  read.csv(file.path(here::here(), 'data', 'click_rates.csv'))
+imanishi <-  read.csv(file.path(here::here(), 'data', 'imanishi_data.csv'))
 
 ## Resampling
 ### Example: Web Stickiness
